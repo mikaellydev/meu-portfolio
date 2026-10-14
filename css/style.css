@@ -1,0 +1,1589 @@
+/* Remove as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #321e20;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Container principal do perfil */
+.header-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    padding: 40px 30px 30px;
+    min-height: 260px;
+}
+
+/* Banner de fundo */
+.foto-princial {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 230px;
+
+    z-index: -1;
+    border-bottom: 4px solid #c67c96;
+}
+
+.foto-princial img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Foto de perfil */
+.foto-perfil {
+    flex-shrink: 0;
+    width: 160px;
+    height: 160px;
+
+    align-self: flex-start;
+    margin-top: 150px;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 4px solid #321e20;
+}
+
+/* Nome e descrição */
+.informacoes {
+    flex: 1;
+    min-width: 0;
+    margin-top: 150px;
+}
+
+.informacoes h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.informacoes p {
+    color: #c5b7b9;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Imagem em destaque */
+.img-em-destaque {
+    flex-shrink: 1;
+    width: 38%;
+    height: 140px;
+    margin-top: 150px;
+}
+
+.img-em-destaque img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 16px;
+}
+
+/* Barra de navegação */
+nav {
+    width: 100%;
+    padding: 0 30px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+
+    border-bottom: 1px solid #60474a;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 20px 0;
+
+    color: #c5b7b9;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #c67c96;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 700px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 30px 20px 20px;
+    }
+
+    .foto-princial {
+        height: 180px;
+    }
+
+    .foto-perfil {
+        width: 100px;
+        height: 100px;
+        margin-top: 110px;
+    }
+
+    .informacoes {
+        flex: 1;
+        margin-top: 110px;
+    }
+
+    .informacoes h1 {
+        font-size: 20px;
+        overflow-wrap: anywhere;
+    }
+
+    .img-em-destaque {
+        width: 100%;
+        height: 150px;
+        margin-top: 10px;
+    }
+
+    nav {
+        padding: 0 15px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+/* Seção Sobre Mim */
+.sobre-mim {
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px 40px;
+
+    border: 2px solid #c67c96;
+    border-radius: 35px;
+}
+
+/* Título */
+.sobre-mim h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+/* Imagem e texto lado a lado */
+.sobre-mim-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Imagem */
+.sobre-mim-imagem {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+}
+
+.sobre-mim-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Texto */
+.sobre-mim-texto {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+.secao-musicas {
+    width: 90%;
+    margin: 25px auto 20px;
+}
+
+.sobre-mim-musica {
+    padding: 18px;
+    background-color: #c67c96;
+    border: 1px solid #d8cfd0;
+    border-radius: 18px;
+}
+
+.sobre-mim-musica h3 {
+    color: #321e20;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.lista-musicas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-musicas iframe {
+    display: block;
+    width: 100%;
+    height: 152px;
+    border: none;
+    border-radius: 12px;
+}
+
+.secao-clips {
+    width: 95%;
+    max-width: 1450px;
+    margin: 35px auto;
+    padding: 35px 45px;
+    border: 2px solid #c67c96;
+    border-radius: 35px;
+    box-sizing: border-box;
+}
+
+.secao-clips h2 {
+    color: #d8cfd0;
+    font-size: 28px;
+    margin: 0 0 30px 20px;
+}
+
+.lista-clips {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 28px;
+}
+
+.lista-clips video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 2px solid #c67c96;
+    border-radius: 25px;
+    background-color: #f8f0f2;
+    box-sizing: border-box;
+}
+
+/* Telas menores */
+@media (max-width: 600px) {
+    .secao-clips {
+        width: 95%;
+        padding: 25px 18px;
+        border-radius: 25px;
+    }
+
+    .secao-clips h2 {
+        font-size: 23px;
+        margin-left: 5px;
+    }
+
+    .lista-clips {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .secao-clips {
+        width: 90%;
+        padding: 25px 18px;
+        border-radius: 25px;
+    }
+
+    .secao-clips h2 {
+        font-size: 23px;
+        margin-left: 5px;
+    }
+
+    .lista-clips {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .sobre-mim {
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    .sobre-mim h2 {
+        font-size: 26px;
+    }
+
+    .sobre-mim-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .sobre-mim-imagem {
+        width: 140px;
+        height: 140px;
+    }
+
+    .sobre-mim-texto {
+        font-size: 16px;
+    }
+}
+
+/* Seção principal */
+.hobbies {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px 20px;
+    border: 2px solid #c67c96;
+    border-radius: 35px;
+
+}
+
+/* Título principal */
+.hobbies>h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+/* Cada categoria */
+.jogos,
+.musica,
+.animes {
+    margin-bottom: 60px;
+}
+
+/* Título da categoria */
+.jogos h3,
+.musica h3,
+.animes h3 {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+/* Nomes dos cards */
+.jogos-nomes,
+.musica-nomes,
+.animes-nomes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+
+    margin-bottom: 15px;
+}
+
+/* Centraliza os nomes */
+.jogos-nomes h4,
+.musica-nomes h4,
+.animes-nomes h4 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Imagens organizadas em cards */
+.jogos-imagem,
+.musica-imagem,
+.animes-imagem {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* Estilo das imagens */
+.jogos-imagem img,
+.musica-imagem img,
+.animes-imagem img {
+    width: 100%;
+    height: 800px;
+
+    object-fit: cover;
+    border-radius: 25px;
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.jogos-imagem img:hover,
+.musica-imagem img:hover,
+.animes-imagem img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Ajuste para tablets e celulares */
+@media (max-width: 700px) {
+    .hobbies {
+        width: 90%;
+    }
+
+    .hobbies>h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .jogos-nomes,
+    .musica-nomes,
+    .animes-nomes {
+        gap: 12px;
+    }
+
+    .jogos-imagem,
+    .musica-imagem,
+    .animes-imagem {
+        gap: 12px;
+    }
+
+    .jogos-imagem img,
+    .musica-imagem img,
+    .animes-imagem img {
+        height: 180px;
+        border-radius: 18px;
+    }
+
+    .jogos-nomes h4,
+    .musica-nomes h4,
+    .animes-nomes h4 {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Celulares menores: dois cards por linha */
+@media (max-width: 450px) {
+
+    .jogos-nomes,
+    .musica-nomes,
+    .animes-nomes,
+    .jogos-imagem,
+    .musica-imagem,
+    .animes-imagem {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .jogos-imagem img,
+    .musica-imagem img,
+    .animes-imagem img {
+        height: 200px;
+    }
+}
+
+/* Caixa principal */
+.habilidades {
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px 45px;
+
+    border: 2px solid #c67c96;
+    border-radius: 35px;
+}
+
+/* Título principal */
+.habilidades>h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* Cada habilidade */
+.cozinhar,
+.desenhar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+/* Texto das habilidades */
+.cozinhar h3,
+.desenhar h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.cozinhar p,
+.desenhar p {
+    flex: 1;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Imagens */
+.cozinhar-imagem,
+.desenhar-imagem {
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+}
+
+.cozinhar-imagem img,
+.desenhar-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 30px;
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.cozinhar-imagem img:hover,
+.desenhar-imagem img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Segunda habilidade: imagem à esquerda */
+.desenhar {
+    flex-direction: row-reverse;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .habilidades {
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    .habilidades>h2 {
+        font-size: 27px;
+    }
+
+    .cozinhar,
+    .desenhar {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .cozinhar-imagem,
+    .desenhar-imagem {
+        width: 150px;
+        height: 120px;
+    }
+}
+
+/* Caixa principal */
+.vida-academica {
+    width: 90%;
+    margin: 50px auto;
+    padding: 35px 40px;
+
+    border: 2px solid #c67c96;
+    border-radius: 35px;
+}
+
+/* Título principal */
+.vida-academica>h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+/* Trajetória e objetivos */
+.trajetoria,
+.objetivos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    margin-bottom: 45px;
+}
+
+/* Textos */
+.trajetoria-texto,
+.objetivos-texto {
+    flex: 1;
+}
+
+.trajetoria h3,
+.materias h3,
+.objetivos h3 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.trajetoria p,
+.objetivos p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Imagens */
+.trajetoria-imagem,
+.objetivos-imagem {
+    flex-shrink: 0;
+    width: 220px;
+    height: 170px;
+}
+
+.trajetoria-imagem img,
+.objetivos-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 25px;
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Efeito das imagens */
+.trajetoria-imagem img:hover,
+.objetivos-imagem img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de matérias */
+.materias {
+    margin-bottom: 45px;
+}
+
+.materias>h3 {
+    margin-bottom: 25px;
+}
+
+/* Cards das matérias */
+.materias-lista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.materia {
+    padding: 25px;
+
+    border: 1px solid #c67c96;
+    border-radius: 22px;
+
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.materia h4 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.materia p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Efeito nos cards */
+.materia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Inverte a posição da imagem nos objetivos */
+.objetivos {
+    flex-direction: row-reverse;
+    margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .vida-academica {
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    .vida-academica>h2 {
+        font-size: 27px;
+    }
+
+    .trajetoria,
+    .objetivos {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .trajetoria-imagem,
+    .objetivos-imagem {
+        width: 100%;
+        max-width: 300px;
+        height: 180px;
+    }
+
+    .materias-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .trajetoria p,
+    .objetivos p {
+        font-size: 16px;
+    }
+}
+
+/* Página do currículo */
+.curriculo {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+/* Cabeçalho com imagem de fundo */
+.cabecalho-curriculo {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    min-height: 190px;
+    padding: 25px;
+
+    background-image: url("../img/banner-cerejeira.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 2px solid #c67c96;
+    border-radius: 35px;
+}
+
+/* Foto de perfil */
+.foto-curriculo {
+    width: 125px;
+    height: 125px;
+    flex-shrink: 0;
+}
+
+.foto-curriculo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #c67c96;
+}
+
+/* Apresentação */
+.apresentacao {
+    margin: 25px 15px 45px;
+}
+
+.apresentacao h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.cargo {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.resumo {
+    max-width: 850px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Seções */
+.secao {
+    margin: 35px 0;
+    padding: 25px;
+
+    border: 2px solid #c67c96;
+    border-radius: 30px;
+}
+
+.secao h2 {
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #d8cfd0;
+}
+
+th {
+    background-color: #c67c96;
+    font-size: 16px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+/* Experiência profissional */
+.experiencia {
+    padding: 5px 0;
+}
+
+.experiencia h3 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    color: #76676a;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.experiencia p:last-child,
+.objetivos p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Seção de objetivos */
+.objetivos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-bottom: 0;
+}
+
+.objetivos h2 {
+    width: 100%;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.objetivos p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Rodapé */
+.rodape {
+    padding: 25px 10px;
+    text-align: center;
+    border-top: 1px solid #d8cfd0;
+    color: #76676a;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* Efeito suave nas caixas */
+.secao {
+    transition: box-shadow 0.3s ease;
+}
+
+.secao:hover {
+    box-shadow: 0 5px 18px rgba(40, 35, 35, 0.07);
+}
+
+/* Seção do GitHub */
+.github {
+    margin: 35px 0;
+    padding: 25px;
+
+    border: 2px solid #c67c96;
+    border-radius: 30px;
+}
+
+.github h2 {
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+
+/* Imagem e informações lado a lado */
+.github-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Imagem do GitHub */
+.github-imagem {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.github-imagem img {
+    display: block;
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border: 2px solid #c67c96;
+    border-radius: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.github-imagem img:hover {
+    transform: scale(1.04);
+}
+
+/* Texto */
+.github-informacoes {
+    flex: 1;
+}
+
+.github-informacoes h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.github-informacoes p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* Link para o GitHub */
+.github-link {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background-color: #321e20;
+    color: #ffffff;
+
+    border: 2px solid #c67c96;
+    border-radius: 12px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: #c67c96;
+    transform: translateY(-2px);
+}
+
+/* Adaptação para celulares */
+@media (max-width: 700px) {
+    .github-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .github-imagem {
+        width: 100%;
+    }
+
+    .github-imagem img {
+        height: 200px;
+    }
+
+    .github h2 {
+        font-size: 23px;
+    }
+}
+
+/* Adaptação para celulares */
+@media (max-width: 700px) {
+    .curriculo {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .cabecalho-curriculo {
+        min-height: 150px;
+        padding: 20px;
+        border-radius: 28px;
+    }
+
+    .foto-curriculo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .apresentacao {
+        margin: 25px 5px 35px;
+    }
+
+    .apresentacao h1 {
+        font-size: 26px;
+    }
+
+    .cargo {
+        font-size: 17px;
+    }
+
+    .secao {
+        padding: 20px 15px;
+        border-radius: 24px;
+    }
+
+    .secao h2 {
+        font-size: 23px;
+    }
+
+    /* Permite rolagem horizontal nas tabelas */
+    .secao table {
+        min-width: 520px;
+    }
+
+    .secao:has(table) {
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+
+/* Página de serviços */
+.pagina-servicos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    color: #f7f4f4;
+}
+
+/* Cabeçalho */
+.cabecalho-servicos {
+    padding: 35px;
+    margin-bottom: 25px;
+
+    border: 2px solid #c67c96;
+    border-radius: 35px;
+}
+
+.cabecalho-servicos h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.cabecalho-servicos p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Navegação */
+.pagina-servicos nav {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 35px;
+}
+
+.pagina-servicos .menu {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #c67c96;
+}
+
+.pagina-servicos .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+}
+
+.pagina-servicos .menu a {
+    display: block;
+    padding: 15px 0;
+
+    color: #76676a;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.pagina-servicos .menu a:hover {
+    color: #c67c96;
+}
+
+/* Introdução */
+.introducao-servicos {
+    margin: 35px 0;
+    padding: 25px 30px;
+
+    border: 2px solid #c67c96;
+    border-radius: 30px;
+}
+
+.introducao-servicos h2,
+.tabela-servicos h2,
+.etapas-servico h2,
+.contratar-servico h2 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.introducao-servicos p,
+.contratar-servico p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Seção da tabela */
+.tabela-servicos {
+    margin: 40px 0;
+    padding: 30px;
+
+    border: 2px solid #c67c96;
+    border-radius: 30px;
+}
+
+/* Permite rolar a tabela em telas pequenas */
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 15px;
+}
+
+.tabela-servicos table {
+    width: 100%;
+    min-width: 700px;
+
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+/* Cabeçalho da tabela */
+.tabela-servicos th {
+    padding: 16px;
+    background-color: #f5e9ed;
+    color: #49353b;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Células */
+.tabela-servicos td {
+    padding: 18px 16px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.7;
+
+    border-bottom: 1px solid #e5d4da;
+}
+
+.tabela-servicos tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Preços */
+.preco {
+    color: #a64d70;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Observação dos preços */
+.observacao {
+    margin-top: 20px;
+    color: #76676a;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .pagina-servicos {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .cabecalho-servicos,
+    .introducao-servicos,
+    .tabela-servicos,
+    .etapas-servico,
+    .contratar-servico {
+        padding: 22px 18px;
+        border-radius: 25px;
+    }
+
+    .cabecalho-servicos h1 {
+        font-size: 28px;
+    }
+
+    .introducao-servicos h2,
+    .tabela-servicos h2,
+    .etapas-servico h2 {
+        font-size: 23px;
+    }
+
+    .etapas-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Página de contato */
+.pagina-contato {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+
+    color: #f7f4f4;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+
+/* Cabeçalho */
+.cabecalho-contato {
+    padding: 35px;
+    margin-bottom: 25px;
+
+    background-color: #321e20;
+    color: #ffffff;
+
+    border: 2px solid #c67c96;
+    border-radius: 35px;
+}
+
+.cabecalho-contato h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cabecalho-contato p {
+    color: #e4cbd3;
+}
+
+/* Navegação */
+.pagina-contato nav {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 35px;
+}
+
+.pagina-contato .menu {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #c67c96;
+}
+
+.pagina-contato .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    list-style: none;
+}
+
+.pagina-contato .menu a {
+    display: block;
+    padding: 15px 0;
+
+    color: #76676a;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.pagina-contato .menu a:hover {
+    color: #c67c96;
+}
+
+/* Introdução e formulário */
+.introducao-contato,
+.formulario-contato {
+    padding: 30px;
+    margin-bottom: 35px;
+
+    border: 2px solid #c67c96;
+    border-radius: 30px;
+}
+
+.pagina-contato section h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.introducao-contato p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Formulário */
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Campos individuais */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label,
+.campo-grupo legend {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Inputs, listas e área de texto */
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 13px 15px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #282323;
+
+    background-color: #fffafa;
+    border: 1px solid #d8b2c0;
+    border-radius: 12px;
+
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Destaque ao selecionar um campo */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #c67c96;
+    box-shadow: 0 0 0 3px rgba(198, 124, 150, 0.15);
+}
+
+/* Área de descrição */
+.campo textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.6;
+}
+
+/* Grupos de opções */
+.campo-grupo {
+    padding: 20px;
+    border: 1px solid #d8b2c0;
+    border-radius: 15px;
+}
+
+.campo-grupo legend {
+    padding: 0 8px;
+}
+
+.texto-auxiliar {
+    margin-bottom: 15px;
+    color: #76676a;
+    font-size: 13px;
+}
+
+/* Opções de pessoa física ou jurídica */
+.opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.opcoes label,
+.lista-servicos label,
+.autorizacao label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Checkboxes e radio buttons */
+.opcoes input,
+.lista-servicos input,
+.autorizacao input {
+    width: 17px;
+    height: 17px;
+    margin-top: 5px;
+
+    flex-shrink: 0;
+    accent-color: #c67c96;
+    cursor: pointer;
+}
+
+/* Lista de serviços */
+.lista-servicos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 12px;
+}
+
+/* Autorização */
+.autorizacao {
+    padding: 18px;
+
+    border-radius: 12px;
+}
+
+/* Botões */
+.botoes-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.botao-enviar,
+.botao-limpar {
+    padding: 13px 24px;
+
+    border: 2px solid #c67c96;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.3s,
+        color 0.3s,
+        transform 0.3s;
+}
+
+.botao-enviar {
+    background-color: #321e20;
+    color: #ffffff;
+}
+
+.botao-enviar:hover {
+    background-color: #c67c96;
+    transform: translateY(-2px);
+}
+
+.botao-limpar {
+    background-color: #ffffff;
+    color: #321e20;
+}
+
+.botao-limpar:hover {
+    background-color: #fbf0f4;
+    transform: translateY(-2px);
+}
+
+/* Rodapé */
+.pagina-contato .rodape {
+    padding: 25px 10px;
+    text-align: center;
+
+    border-top: 1px solid #c67c96;
+    color: #76676a;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .pagina-contato {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .cabecalho-contato {
+        padding: 25px 20px;
+        border-radius: 25px;
+    }
+
+    .cabecalho-contato h1 {
+        font-size: 27px;
+    }
+
+    .introducao-contato,
+    .formulario-contato {
+        padding: 22px 18px;
+        border-radius: 24px;
+    }
+
+    .pagina-contato section h2 {
+        font-size: 23px;
+    }
+
+    .pagina-contato .menu ul {
+        gap: 18px;
+    }
+
+    .pagina-contato .menu a {
+        font-size: 14px;
+    }
+
+    .lista-servicos {
+        grid-template-columns: 1fr;
+    }
+
+    .opcoes {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .botoes-formulario {
+        flex-direction: column;
+    }
+
+    .botao-enviar,
+    .botao-limpar {
+        width: 100%;
+    }
+}

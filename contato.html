@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato | Mikaelly Ferreira Izoton</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="icon" href="img/icone.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <main class="pagina-contato">
+
+        <!-- Cabeçalho -->
+        <header class="cabecalho-contato">
+            <h1>Entre em contato</h1>
+
+            <p>
+                Tem uma ideia ou precisa de um site?
+                Preencha o formulário para conversarmos sobre seu projeto!
+            </p>
+        </header>
+
+        <!-- Menu de navegação -->
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="curriculo.html">Currículo</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Introdução -->
+        <section class="introducao-contato">
+            <h2>Vamos conversar?</h2>
+
+            <p>
+                Conte um pouco sobre você e o serviço que deseja contratar.
+                Assim, poderei entender melhor suas necessidades e conversar
+                com você sobre as possibilidades para o seu projeto.
+            </p>
+        </section>
+
+        <!-- Formulário -->
+        <section class="formulario-contato">
+
+            <h2>Formulário de contato</h2>
+
+            <form action="#" method="post">
+
+                <!-- Nome completo -->
+                <div class="campo">
+                    <label for="nome">Nome completo:</label>
+
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name"
+                        required>
+                </div>
+
+                <!-- Telefone -->
+                <div class="campo">
+                    <label for="telefone">Telefone:</label>
+
+                    <input type="tel" id="telefone" name="telefone" placeholder="(27) 99999-9999" autocomplete="tel"
+                        required>
+                </div>
+
+                <!-- E-mail -->
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com" autocomplete="email"
+                        required>
+                </div>
+
+                <!-- Pessoa física ou jurídica -->
+                <fieldset class="campo-grupo">
+
+                    <legend>Você é:</legend>
+
+                    <div class="opcoes">
+                        <label>
+                            <input type="radio" name="tipo-pessoa" value="fisica" required>
+                            Pessoa física
+                        </label>
+
+                        <label>
+                            <input type="radio" name="tipo-pessoa" value="juridica">
+                            Pessoa jurídica
+                        </label>
+                    </div>
+
+                </fieldset>
+
+                <!-- Melhor horário para contato -->
+                <div class="campo">
+                    <label for="horario">Melhor horário para contato:</label>
+
+                    <select id="horario" name="horario" required>
+                        <option value="">Selecione um horário</option>
+                        <option value="manha">Manhã (08h às 12h)</option>
+                        <option value="tarde">Tarde (12h às 18h)</option>
+                        <option value="noite">Noite (18h às 21h)</option>
+                        <option value="qualquer">Qualquer horário</option>
+                    </select>
+                </div>
+
+                <!-- Tipo de serviço -->
+                <fieldset class="campo-grupo">
+
+                    <legend>Qual serviço você deseja contratar?</legend>
+
+                    <p class="texto-auxiliar">
+                        Você pode selecionar mais de uma opção.
+                    </p>
+
+                    <div class="lista-servicos">
+
+                        <label>
+                            <input type="checkbox" name="servicos[]" value="homepage">
+                            Home Page
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="servicos[]" value="estatico">
+                            Site estático (HTML e CSS)
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="servicos[]" value="dinamico">
+                            Site dinâmico
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="servicos[]" value="avancado">
+                            Projeto avançado
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="servicos[]" value="outro">
+                            Outro serviço
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+                <!-- Orçamento estimado -->
+                <div class="campo">
+                    <label for="orcamento">Qual é o seu orçamento estimado?</label>
+
+                    <select id="orcamento" name="orcamento">
+                        <option value="">Selecione uma faixa de valor</option>
+                        <option value="ate-250">Até R$ 250,00</option>
+                        <option value="250-600">De R$ 250,00 a R$ 600,00</option>
+                        <option value="600-1200">De R$ 600,00 a R$ 1.200,00</option>
+                        <option value="acima-1200">Acima de R$ 1.200,00</option>
+                        <option value="definir">Ainda não defini</option>
+                    </select>
+                </div>
+
+                <!-- Prazo desejado -->
+                <div class="campo">
+                    <label for="prazo">Data desejada para entrega:</label>
+
+                    <input type="date" id="prazo" name="prazo">
+                </div>
+
+                <!-- Descrição do projeto -->
+                <div class="campo">
+                    <label for="descricao">
+                        Descreva brevemente o que deseja contratar:
+                    </label>
+
+                    <textarea id="descricao" name="descricao" rows="6"
+                        placeholder="Conte como imagina seu projeto, quais funcionalidades deseja e outras informações importantes..."
+                        required></textarea>
+                </div>
+
+                <!-- Como conheceu o trabalho -->
+                <div class="campo">
+                    <label for="origem">Como conheceu meu trabalho?</label>
+
+                    <select id="origem" name="origem">
+                        <option value="">Selecione uma opção</option>
+                        <option value="indicacao">Indicação</option>
+                        <option value="redes-sociais">Redes sociais</option>
+                        <option value="portfolio">Portfólio</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <!-- Autorização de contato -->
+                <div class="autorizacao">
+                    <label>
+                        <input type="checkbox" name="autorizacao" value="sim" required>
+                        Autorizo o uso dos dados informados para
+                        entrar em contato comigo sobre esta solicitação.
+                    </label>
+                </div>
+
+                <!-- Botões -->
+                <div class="botoes-formulario">
+                    <button type="submit" class="botao-enviar">
+                        Enviar formulário
+                    </button>
+
+                    <button type="reset" class="botao-limpar">
+                        Limpar formulário
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="rodape">
+            <p>Mikaelly Ferreira Izoton | Entre em contato</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
